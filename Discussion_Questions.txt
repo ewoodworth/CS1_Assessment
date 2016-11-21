@@ -1,0 +1,74 @@
+Part 1: Discussion Questions
+
+Runtime
+
+When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+The workload will be directly proportional to the number of animal crackers in the box.
+
+Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+
+O(1)
+O(n)
+O(n2)
+O(log n)
+O(n log n)
+O(2n) (i.e. 2 to the n-th power)
+
+Stacks and Queues
+
+In the following cases, would a stack or queue be a more appropriate data structure?
+The process of loading and unloading pallets onto a flatbed truck
+*Stack
+Putting bottle caps on bottles of beer as they roll down an assembly line
+*Queue
+Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+*Queue
+Describe two more situations where a queue would be an appropriate data structure.
+*Opening a new milk carton if there are several in the fridge at home, so you use up the oldest milk before it goes bad (FIFO)
+*Directing traffic through the turnstiles of a parking garage.
+Describe two more situations where a stack would be an appropriate data structure.
+*Choosing a milk carton at the grocery store, assuming you want the freshest one. (LIFO) (This makes you kind of a jerk, but is common practice)
+*Adressing envelopes for wedding invitations.
+
+Linked Lists
+
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+This linked list has three nodes. (They are the divided boxes on the second line, I'll describe them next.)
+    The first node contains the data "Apple" (the text on the left of the division) and it's next-attribute points to the second node. (There's an arrow to represent this)
+    The second node contains the data "Berry" (the text on the left of the division) and it's next-attribute points to the third node. (There's an arrow to represent this)
+    The third node contains the data "Cherry" (the text on the left of the division) and it's next-attribute point to None
+
+The head attribute of this linked list is assigned to the first node.  (There's an arrow to represent this)
+
+What’s the difference between doubly- and singly-linked lists?
+
+*Nodes in a singly linked lists carry a definition of their "next" node. Doubly linked lists carry a definition both of this next node and the previous node, so traversal can change direction.
+
+Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+*If there is no defined tail, one must traverse the whole list to discover the end node. With a defined tail, one may start at the tail, see where it points, and go directly to the last node in the list.
+
+Trees
+
+
+Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+food, italian, indian, mexican, lasagne, pizza, tikka masala, saag, burrito
+
+Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+food, mexican, enchiladas, tacos, burritos, indian, tikka masala, saag, italian, lasagna, pizza, sicilian, NY Style, chicago style
+
+How is a binary search tree different from other trees?
+
+Binary search trees are constructed (balanced) such that each branch has a rule or a scheme to give the traversal path meaning. So, left branch leads to data greater than the node data and right branch leads to data less than the node data (or similar, as long as direction carries the same meaning from node to node)
+
+
+Trees
+
+In the file called tree.py there is a class definition for a Tree, which we might use for keeping track of an organizational chart at a company. There is also a class definition for a Node, which would represent an employee. Each node has an attribute called children, which is a list of other instances of nodes. In the real world, a node’s children would represent the people whom that node/person supervises.
+
+In the Node class, finish the method called get_num_children. This function could be used to count the number of people whom a person supervises.
+In the Tree class, finish the method called breadth_first_search. Hover over the section below if you need a hint.
